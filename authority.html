@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authority Access - Green Justice</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="gj-header">
+      <div class="gj-logo">Green<span>Justice</span></div>
+      <nav>
+        <a href="index.html">Home</a>
+      </nav>
+    </header>
+
+    <main class="gj-main auth">
+      <section class="card auth-card">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login">Login</button>
+          <button class="auth-tab" data-tab="signup">Sign up</button>
+        </div>
+
+        <div id="auth-login" class="auth-panel active">
+          <h1>Authority login</h1>
+          <p class="muted">
+            Access the Green Justice dashboard to manage and track complaints.
+          </p>
+
+          <form id="login-form">
+            <div class="field">
+              <label for="login-email" class="field-label">Email</label>
+              <input
+                id="login-email"
+                name="email"
+                type="email"
+                class="field-input"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="login-password" class="field-label">Password</label>
+              <input
+                id="login-password"
+                name="password"
+                type="password"
+                class="field-input"
+                required
+              />
+            </div>
+            <button type="submit" class="btn primary full-width">
+              Login
+            </button>
+          </form>
+        </div>
+
+        <div id="auth-signup" class="auth-panel">
+          <h1>Authority sign up</h1>
+          <p class="muted">
+            Create an account to receive, sort, and respond to environmental
+            complaints.
+          </p>
+
+          <form id="signup-form">
+            <div class="field">
+              <label for="signup-name" class="field-label">Full name</label>
+              <input
+                id="signup-name"
+                name="name"
+                type="text"
+                class="field-input"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="signup-email" class="field-label">Email</label>
+              <input
+                id="signup-email"
+                name="email"
+                type="email"
+                class="field-input"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="signup-password" class="field-label">Password</label>
+              <input
+                id="signup-password"
+                name="password"
+                type="password"
+                class="field-input"
+                required
+              />
+            </div>
+            <button type="submit" class="btn primary full-width">
+              Create account
+            </button>
+          </form>
+        </div>
+
+        <p id="auth-message" class="form-message"></p>
+      </section>
+    </main>
+
+    <footer class="gj-footer">
+      <p>Green Justice &copy; <span id="year"></span></p>
+    </footer>
+
+    <script src="js/authority.js"></script>
+  </body>
+  </html>
+

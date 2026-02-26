@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report a Violation - Green Justice</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="gj-header">
+      <div class="gj-logo">Green<span>Justice</span></div>
+      <nav>
+        <a href="index.html">Home</a>
+      </nav>
+    </header>
+
+    <main class="gj-main wizard">
+      <!-- Step 1: Welcome & language -->
+      <section class="wizard-step active" data-step="1">
+        <h1>Welcome to Green Justice</h1>
+        <p>
+          Thank you for taking the time to report an environmental law
+          violation. Your action helps protect nature and your community.
+        </p>
+
+        <label for="language-select" class="field-label"
+          >Choose your language</label
+        >
+        <select id="language-select" class="field-input">
+          <option value="en" selected>English</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+        </select>
+
+        <div class="wizard-nav">
+          <button class="btn primary" data-next>Continue</button>
+        </div>
+      </section>
+
+      <!-- Step 2: Map & explanation -->
+      <section class="wizard-step" data-step="2">
+        <h1>Where we focus our efforts</h1>
+        <p>
+          Green Justice collects reports of suspected environmental violations
+          and shares them with the relevant authorities. The map below
+          illustrates typical areas where issues are reported.
+        </p>
+
+        <div class="map-placeholder">
+          <div class="map-header">
+            <span>Environmental Hotspots (Illustrative)</span>
+          </div>
+          <div class="map-body">
+            <div class="map-legend">
+              <span class="dot illegal-dumping"></span> Illegal dumping
+            </div>
+            <div class="map-legend">
+              <span class="dot water-pollution"></span> Water pollution
+            </div>
+            <div class="map-legend">
+              <span class="dot air-pollution"></span> Air pollution
+            </div>
+          </div>
+        </div>
+
+        <p class="muted">
+          This is a conceptual map to explain our work. Your exact location will
+          be attached securely to your report for the authorities.
+        </p>
+
+        <div class="wizard-nav">
+          <button class="btn ghost" data-prev>Back</button>
+          <button class="btn primary" data-next>Next</button>
+        </div>
+      </section>
+
+      <!-- Step 3: Violation details -->
+      <section class="wizard-step" data-step="3">
+        <h1>Tell us about the violation</h1>
+
+        <form id="complaint-form" class="card">
+          <div class="field">
+            <label for="violation-type" class="field-label"
+              >Type of violation</label
+            >
+            <select id="violation-type" name="violation_type" class="field-input" required>
+              <option value="">Select a type</option>
+              <option value="illegal-dumping">Illegal dumping</option>
+              <option value="water-pollution">Water pollution</option>
+              <option value="air-pollution">Air pollution</option>
+              <option value="deforestation">Deforestation / habitat destruction</option>
+              <option value="other">Other environmental harm</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="field-label">Pin the location on the map</label>
+            <p class="muted">
+              Move and zoom the map, then tap once to mark where the violation
+              happened. We will copy the coordinates into the location box for
+              you (you can still edit it).
+            </p>
+            <div id="gj-map" class="map-interactive"></div>
+          </div>
+
+          <div class="field">
+            <label for="location" class="field-label"
+              >Location of the violation</label
+            >
+            <input
+              id="location"
+              name="location"
+              class="field-input"
+              placeholder="Street, landmark, coordinates, or brief description"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="media" class="field-label"
+              >Photo or video (optional but recommended)</label
+            >
+            <input
+              id="media"
+              name="media"
+              type="file"
+              accept="image/*,video/*"
+              class="field-input"
+            />
+            <p class="muted">
+              Please only upload files you captured yourself and that you are
+              allowed to share.
+            </p>
+          </div>
+
+          <div class="field">
+            <label for="description" class="field-label"
+              >Anything else you would like to add?</label
+            >
+            <textarea
+              id="description"
+              name="description"
+              rows="4"
+              class="field-input"
+              placeholder="Explain what happened, when it started, and why you think it may be against environmental law."
+            ></textarea>
+          </div>
+
+          <div class="wizard-nav">
+            <button type="button" class="btn ghost" data-prev>Back</button>
+            <button type="submit" class="btn primary">Submit report</button>
+          </div>
+        </form>
+
+        <div id="thank-you" class="thank-you hidden">
+          <h2>Thank you for helping to keep the environment clean.</h2>
+          <p>
+            Your report has been securely sent to Green Justice. We will route
+            it to the relevant council, committee, or department for review.
+          </p>
+          <a href="index.html" class="btn primary">Back to home</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="gj-footer">
+      <p>Green Justice &copy; <span id="year"></span></p>
+    </footer>
+
+    <!-- Leaflet CSS/JS for key-free OpenStreetMap -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="js/user.js"></script>
+  </body>
+  </html>
+

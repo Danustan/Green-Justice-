@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authority Dashboard - Green Justice</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="gj-header">
+      <div class="gj-logo">Green<span>Justice</span></div>
+      <nav>
+        <span id="authority-name"></span>
+        <button id="logout-btn" class="btn ghost small">Logout</button>
+      </nav>
+    </header>
+
+    <main class="gj-main dashboard">
+      <section class="dashboard-header">
+        <div>
+          <h1>Complaints</h1>
+          <p class="muted">
+            Live list of reported environmental violations. Sort and update
+            their status in real time.
+          </p>
+        </div>
+        <div class="dashboard-controls">
+          <label for="sort-select" class="field-label">Sort by</label>
+          <select id="sort-select" class="field-input compact">
+            <option value="recent">Most recent</option>
+            <option value="highly-reported">Highly reported</option>
+            <option value="oldest-open">Oldest open first</option>
+            <option value="oldest">Oldest</option>
+          </select>
+        </div>
+      </section>
+
+      <section id="complaints-container" class="complaints-list">
+        <!-- Filled by JS -->
+      </section>
+
+      <section id="empty-state" class="empty-state hidden">
+        <p>No complaints yet. New reports will appear here in real time.</p>
+      </section>
+    </main>
+
+    <footer class="gj-footer">
+      <p>Green Justice &copy; <span id="year"></span></p>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+  </body>
+  </html>
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Justice</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="gj-header">
+      <div class="gj-logo">Green<span>Justice</span></div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#how-it-works">How it works</a>
+      </nav>
+    </header>
+
+    <main class="gj-main landing">
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Together for a cleaner, fairer environment.</h1>
+          <p>
+            Green Justice helps citizens report environmental law violations and
+            connects authorities with the right information to act quickly.
+          </p>
+
+          <div class="hero-actions">
+            <a href="user.html" class="btn primary">I am a citizen / witness</a>
+            <a href="authority.html" class="btn ghost"
+              >I am an authority member</a
+            >
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="earth-illustration">
+            <div class="overlay-card">
+              <h2>Real-time complaints</h2>
+              <p>Track reports, prioritize hotspots and take timely action.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <h2>What is Green Justice?</h2>
+        <p>
+          Green Justice is a digital bridge between people and institutions. We
+          turn citizen-reported environmental violations into structured
+          complaints that reach the relevant council, committee, or department
+          with all the details they need.
+        </p>
+      </section>
+
+      <section id="how-it-works" class="section steps">
+        <h2>How it works</h2>
+        <div class="steps-grid">
+          <article class="step-card">
+            <h3>1. Citizens report</h3>
+            <p>
+              Witnesses select the type of violation, add a photo or video,
+              share the location and provide any extra details.
+            </p>
+          </article>
+          <article class="step-card">
+            <h3>2. Smart routing</h3>
+            <p>
+              The system links each report with the most relevant authority
+              office, including contact details for quick follow-up.
+            </p>
+          </article>
+          <article class="step-card">
+            <h3>3. Tracking & reminders</h3>
+            <p>
+              Authorities see a live list of complaints, sort them by urgency,
+              and receive reminders if a report has not been addressed within a
+              week.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="gj-footer">
+      <p>Green Justice &copy; <span id="year"></span>. For a cleaner tomorrow.</p>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
